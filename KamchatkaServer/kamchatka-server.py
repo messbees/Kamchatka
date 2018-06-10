@@ -18,7 +18,7 @@ class KodeFunHTTPRequestHandler(BaseHTTPRequestHandler):
                 #send file content to client
                 self.wfile.write(f.read())
                 f.close()
-        return
+                return
 
         except IOError:
             self.send_error(404, 'file not found')
